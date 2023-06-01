@@ -21,16 +21,12 @@ const RightScreen = ({movie}) => {
             <div>
                 <h4 className='topHeading'>Movie Summary</h4>
             </div>
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-
-                <div className="bg-success p-2 text-dark bg-opacity-10" style={{ marginLeft: "20%", marginRight: "20%", fontSize: "30px", border: "2px solid gray ", padding: "10px", color: "white" }}>
-                    {/* <p>{movie.show.name}</p> */}
-                    <p>{ movie.show!== undefined ? movie.show.name : ""}</p>
-                    <p>{ movie.show!==undefined ? movie.show.summary : ""}</p>
-                     
-                    {/* <p>{movie?.show.summary}</p> */}
+            <div>
+                <div className='rightContent'>
+                    <p className='movieName2'>{ movie.show !== undefined ? movie.show.name : ""}</p>
+                    <p className='movieSummary'>{ movie.show !== undefined ? movie.show.summary : ""}</p>     
                     <Link to={movie.show!==undefined ? `movie/${movie.show.id}` : ""}>
-                        <button className="btn btn-primary btn-lg btn-primary">Book ticket</button>
+                        <button className='bookTicketBtn'>Book ticket</button>
                     </Link>
                 </div>
             </div>

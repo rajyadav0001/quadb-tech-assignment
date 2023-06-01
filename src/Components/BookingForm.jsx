@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function BookingForm() {
+  const navigate = useNavigate();
   const [movie, setMovie] = useState(null);
   const { id } = useParams();
 
@@ -21,6 +23,8 @@ function BookingForm() {
     event.preventDefault();
     const booking = { name, email, phone, movieName: movie.name };
     localStorage.setItem('booking', JSON.stringify(booking));
+    alert("Booking Successful")
+    navigate('/');
   };
 
   if (!movie) {
