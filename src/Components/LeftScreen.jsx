@@ -1,4 +1,5 @@
 import '../App.css';
+// import './LeftScreen.css';
 
 
 function LeftScreen(props) {
@@ -6,7 +7,7 @@ function LeftScreen(props) {
     return (
         <div className="leftScreen">
             <div>
-                <h4 className='topHeading'>Movie List</h4>
+                <h4 className='topHeading1'>Movie List</h4>
             </div>
             <div className='cardContainer'>
                 {props.movies.map((movie) => (
