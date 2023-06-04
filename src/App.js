@@ -7,7 +7,7 @@ import RightScreen from './Components/RightScreen';
 
 function App() {
   const [movies, setMovies] = useState([]);
-  const [movie,setMovie] = useState({});
+  const [movie, setMovie] = useState({});
 
   useEffect(() => {
     fetch('https://api.tvmaze.com/search/shows?q=all')

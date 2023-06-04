@@ -1,6 +1,4 @@
 import '../App.css';
-// import './LeftScreen.css';
-
 
 function LeftScreen(props) {
 
